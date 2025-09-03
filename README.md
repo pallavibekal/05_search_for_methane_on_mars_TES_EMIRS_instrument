@@ -132,3 +132,16 @@ Extended study → applied the method to Ls = 0°, 90°, and 270° to test for s
 <img width="1060" height="431" alt="image" src="https://github.com/user-attachments/assets/a185a64b-1a66-4c5d-a937-2c3732c6658f" />
 
 <img width="1046" height="580" alt="image" src="https://github.com/user-attachments/assets/eef71488-1012-4da0-a1ea-e84e6639f6e7" />
+
+<img width="1035" height="525" alt="image" src="https://github.com/user-attachments/assets/ca9b9068-45a0-4a2b-b1ee-642b3d747807" />
+
+<img width="1043" height="387" alt="image" src="https://github.com/user-attachments/assets/9bd621cc-359f-476a-9ad4-7f8c9cb679ef" />
+
+<img width="1033" height="456" alt="image" src="https://github.com/user-attachments/assets/db9eda84-ebbb-47a4-b8b7-0a0389370150" />
+
+<img width="1043" height="586" alt="image" src="https://github.com/user-attachments/assets/4b2b5da7-3074-410e-8469-8d09353c021c" /> 
+
+<img width="1035" height="310" alt="image" src="https://github.com/user-attachments/assets/ec1839bf-3cbc-4cfc-9eae-fd2ef9d6d91a" />
+
+
+
