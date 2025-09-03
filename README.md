@@ -77,60 +77,36 @@ These discrepancies raise critical questions:
 ### 2.1 Objective and Approach
 
 The Emirates Mars Mission (EMM) provides an extensive dataset of spectra, making it well-suited for statistical clustering techniques. The method introduced by Fonti & Marzo (2010) has proven effective for large datasets, as it improves the signal-to-noise ratio through data averaging.
-
 This approach has been validated and applied across multiple contexts:
-
 Synthetic data → Liuzzi et al. (2014)
-
 Planetary remote sensing spectra → Marzo et al. (2008)
-
 Spectral classification maps of Mars (CRISM/MRO) → Pletl et al. (2023)
-
 Surface classification of Mercury & the Moon → Taisei et al. (2024)
-
 A detailed explanation of this clustering method, particularly as applied to TES spectra, can be found in Marzo et al. (2008).
 
-K-means Clustering
+### K-means Clustering
 
 The clustering procedure employs the k-means algorithm, which minimizes the within-cluster sum of squares:
-
 <img width="949" height="314" alt="image" src="https://github.com/user-attachments/assets/ba708f73-95a3-47ac-877d-0a600c0735c8" />
 
-
 ### Limitations of K-means
-
 **Noise sensitivity** → noisy data can cause misclassification or poor centroid selection (Jolion & Rosenfeld, 1989).
-
 **Spectral dilution** → clustering over large regions can weaken or distort narrow methane absorption features (Fonti et al., 2015).
-
 **Choice of k** → the number of clusters must be specified a priori, which is non-trivial (Turner et al., 2018).
-
 **Refinements by Fonti et al. (2015)**
-
 To address these limitations, Fonti et al. (2015) refined the methodology by:
-
 Applying rigorous noise reduction for TES infrared spectra.
-
 Focusing on narrow spectral regions to better isolate methane absorption.
-
 Keeping the same number of clusters as in 2010, ensuring comparability while acknowledging the lack of clear intrinsic clustering.
-
 These refinements led to earlier methane detections being deemed inconclusive, but the methods remain highly relevant for emissivity data. Importantly, the EMIRS spectrometer on EMM shares direct lineage with TES (Smith et al., 2022), making these techniques directly applicable.
 
 **Application in This Study**
-
 Applied refined clustering techniques to EMM/EMIRS data.
-
 Reanalyzed the original Fonti & Marzo (2010) dataset, which was not revisited in 2015.
-
 Validation step → replicated TES analysis at Ls = 180° (Fonti et al., 2015).
-
 Extended study → applied the method to Ls = 0°, 90°, and 270° to test for seasonal variation in TES data.
-
 <img width="1056" height="330" alt="image" src="https://github.com/user-attachments/assets/4d9e3ffb-53a6-4c72-8fb0-2b261d51f666" />
-
 <img width="1060" height="431" alt="image" src="https://github.com/user-attachments/assets/a185a64b-1a66-4c5d-a937-2c3732c6658f" />
-
 <img width="1046" height="580" alt="image" src="https://github.com/user-attachments/assets/eef71488-1012-4da0-a1ea-e84e6639f6e7" />
 
 <img width="1035" height="525" alt="image" src="https://github.com/user-attachments/assets/ca9b9068-45a0-4a2b-b1ee-642b3d747807" />
@@ -164,4 +140,26 @@ Extended study → applied the method to Ls = 0°, 90°, and 270° to test for s
 <img width="1077" height="523" alt="image" src="https://github.com/user-attachments/assets/bd3709eb-116a-4d9a-aeaa-09d565289b48" />
 
 <img width="1072" height="320" alt="image" src="https://github.com/user-attachments/assets/507b0c93-d5d1-460a-9cdc-cb09fbd72bd9" />
+
+<img width="1072" height="767" alt="image" src="https://github.com/user-attachments/assets/bd405842-9faa-44d4-b351-cfa423e5bc55" />
+
+<img width="1101" height="506" alt="image" src="https://github.com/user-attachments/assets/80f7dde9-43ab-4048-a214-7717f0b9df7e" />
+
+<img width="1100" height="786" alt="image" src="https://github.com/user-attachments/assets/1709561b-5f53-4be5-a7c7-b63a277b5195" />
+
+<img width="1079" height="559" alt="image" src="https://github.com/user-attachments/assets/ced7e8d1-084b-4f26-8e8e-70d1fea7d873" />
+
+<img width="1078" height="516" alt="image" src="https://github.com/user-attachments/assets/f70c051b-7d99-43e3-bef4-68133d39a251" />
+
+<img width="1058" height="747" alt="image" src="https://github.com/user-attachments/assets/2c38764f-d465-43c7-bab1-430e392e7166" />
+
+<img width="1038" height="200" alt="image" src="https://github.com/user-attachments/assets/d3a43c67-4a0e-4d0b-92d9-b28abb114cf0" />
+
+<img width="1046" height="743" alt="image" src="https://github.com/user-attachments/assets/8099c2d3-cb0e-4845-b0d4-e6c2106629b0" />
+
+<img width="1069" height="314" alt="image" src="https://github.com/user-attachments/assets/df8cd047-18c8-4d7a-aa85-91903fb8bdd3" />
+
+<img width="1078" height="633" alt="image" src="https://github.com/user-attachments/assets/4a1391a1-95d0-429d-aceb-79771b073146" />
+
+<img width="1078" height="633" alt="image" src="https://github.com/user-attachments/assets/1f67dd33-4dfc-4ea2-8150-0d6e455e0e1f" />
 
