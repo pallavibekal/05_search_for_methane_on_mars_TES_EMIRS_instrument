@@ -143,5 +143,25 @@ Extended study → applied the method to Ls = 0°, 90°, and 270° to test for s
 
 <img width="1035" height="310" alt="image" src="https://github.com/user-attachments/assets/ec1839bf-3cbc-4cfc-9eae-fd2ef9d6d91a" />
 
+<img width="1040" height="490" alt="image" src="https://github.com/user-attachments/assets/93dadb41-3e43-4d78-8ec9-2103a8d665bb" />
 
+ <img width="1046" height="603" alt="image" src="https://github.com/user-attachments/assets/4b337439-641b-4d28-802a-f930b5006516" />
+
+<img width="1055" height="270" alt="image" src="https://github.com/user-attachments/assets/d2ce4548-5a87-415d-be37-eb2e1a1ee351" />
+
+<img width="1033" height="806" alt="image" src="https://github.com/user-attachments/assets/0c45e4ee-eda9-4bae-a997-ba70e2884107" />
+
+<img width="1098" height="491" alt="image" src="https://github.com/user-attachments/assets/c152f9b1-a36e-4b63-8cd4-4855f6dc7d9e" />
+
+<img width="1096" height="579" alt="image" src="https://github.com/user-attachments/assets/df4691b5-cae7-4849-b3e8-8c89195679a9" />
+
+<img width="1075" height="415" alt="image" src="https://github.com/user-attachments/assets/e615de2d-0c78-448f-8d6b-46b618af9245" />
+
+<img width="1075" height="415" alt="image" src="https://github.com/user-attachments/assets/d1930e89-6b5d-4487-81e3-e24f22b2755a" />
+
+<img width="1088" height="622" alt="image" src="https://github.com/user-attachments/assets/13d03882-c66b-464d-a787-19927b65ad5b" />
+
+<img width="1077" height="523" alt="image" src="https://github.com/user-attachments/assets/bd3709eb-116a-4d9a-aeaa-09d565289b48" />
+
+<img width="1072" height="320" alt="image" src="https://github.com/user-attachments/assets/507b0c93-d5d1-460a-9cdc-cb09fbd72bd9" />
 
