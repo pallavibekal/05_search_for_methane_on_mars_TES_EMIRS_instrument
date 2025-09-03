@@ -1,20 +1,6 @@
 # 05_search_for_methane_on_mars_TES_EMIRS_instrument
 This folder contains programs used to analyze the EMIRS spectra + TES spectra to search for methane on Mars and understand if diurnal or seasonal variations exist
 
-# ABSTRACT
-
-The detection of methane on Mars, ranging from a few ppbv to ∼100 ppbv, and contrary reports of non-detection have intrigued the community for more than two decades. Reports of detection with Earth-based observations, from Martian orbit, and on the surface have been challenged on theoretical grounds, on the quality of the signal, and on the interpretation of results.  
-
-The highly sensitive **ExoMars TGO’s ACS and NOMAD instruments** put an upper limit of a few pptv, several orders of magnitude below what was reported earlier. However, the ExoMars observations are made at fixed local times and are not sensitive to the atmosphere near the surface.  
-
-The **Emirates Mars Mission (EMM)** provides near-global coverage of the planet every 9 sols. We use data from the **EMIRS infrared spectrometer** on board EMM during Mars Year 36 and archival data of **MGS/TES** to search for absorption at the C-H bending mode of methane at 1306 cm⁻¹.  
-
-We report:
-- An upper limit of **4 ppbv (day)** and **10 ppbv (night)** for methane detection using EMM/EMIRS.  
-- An upper limit of **2 ppbv** for methane detection using MGS/TES.  
-
-These results are consistent with the latest **MSL** and **TGO** findings. Future observations with EMM will further refine these constraints.
-
 
 ## ABSTRACT
 The detection of methane on Mars, ranging from a few ppbv to ∼100 ppbv, and contrary reports of non-detection have intrigued the community for more than two decades. Reports of detection with Earth-based observations, from Martian orbit, and from the surface have been challenged on theoretical grounds, on the quality of the signal, and on interpretation of results.  
@@ -87,8 +73,8 @@ These discrepancies raise critical questions:
 
 ---
 
-2. Methodology
-2.1 Objective and Approach
+## 2. Methodology
+### 2.1 Objective and Approach
 
 The Emirates Mars Mission (EMM) provides an extensive dataset of spectra, making it well-suited for statistical clustering techniques. The method introduced by Fonti & Marzo (2010) has proven effective for large datasets, as it improves the signal-to-noise ratio through data averaging.
 
@@ -108,69 +94,18 @@ K-means Clustering
 
 The clustering procedure employs the k-means algorithm, which minimizes the within-cluster sum of squares:
 
-arg min
-𝐶
-∑
-𝑖
-=
-1
-𝑘
-∑
-𝑥
-∈
-𝐶
-𝑖
-∥
-𝑥
-−
-𝜇
-𝑖
-∥
-2
-C
-arg min
-	​
+<img width="949" height="314" alt="image" src="https://github.com/user-attachments/assets/ba708f73-95a3-47ac-877d-0a600c0735c8" />
 
-i=1
-∑
-k
-	​
 
-x∈C
-i
-	​
+### Limitations of K-means
 
-∑
-	​
+**Noise sensitivity** → noisy data can cause misclassification or poor centroid selection (Jolion & Rosenfeld, 1989).
 
-∥x−μ
-i
-	​
+**Spectral dilution** → clustering over large regions can weaken or distort narrow methane absorption features (Fonti et al., 2015).
 
-∥
-2
+**Choice of k** → the number of clusters must be specified a priori, which is non-trivial (Turner et al., 2018).
 
-Where:
-
-k → number of clusters
-
-C = {C₁, C₂, …, Cₖ} → set of clusters
-
-x → data point assigned to cluster i
-
-μᵢ → centroid (mean) of cluster Cᵢ
-
-‖x − μᵢ‖² → squared Euclidean distance between data point x and centroid μᵢ (Steinley, 2006)
-
-Limitations of K-means
-
-Noise sensitivity → noisy data can cause misclassification or poor centroid selection (Jolion & Rosenfeld, 1989).
-
-Spectral dilution → clustering over large regions can weaken or distort narrow methane absorption features (Fonti et al., 2015).
-
-Choice of k → the number of clusters must be specified a priori, which is non-trivial (Turner et al., 2018).
-
-Refinements by Fonti et al. (2015)
+**Refinements by Fonti et al. (2015)**
 
 To address these limitations, Fonti et al. (2015) refined the methodology by:
 
@@ -182,7 +117,7 @@ Keeping the same number of clusters as in 2010, ensuring comparability while ack
 
 These refinements led to earlier methane detections being deemed inconclusive, but the methods remain highly relevant for emissivity data. Importantly, the EMIRS spectrometer on EMM shares direct lineage with TES (Smith et al., 2022), making these techniques directly applicable.
 
-Application in This Study
+**Application in This Study**
 
 Applied refined clustering techniques to EMM/EMIRS data.
 
