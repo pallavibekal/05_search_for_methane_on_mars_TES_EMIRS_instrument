@@ -126,3 +126,8 @@ Reanalyzed the original Fonti & Marzo (2010) dataset, which was not revisited in
 Validation step → replicated TES analysis at Ls = 180° (Fonti et al., 2015).
 
 Extended study → applied the method to Ls = 0°, 90°, and 270° to test for seasonal variation in TES data.
+
+<img width="1056" height="330" alt="image" src="https://github.com/user-attachments/assets/4d9e3ffb-53a6-4c72-8fb0-2b261d51f666" />
+
+<img width="1060" height="431" alt="image" src="https://github.com/user-attachments/assets/a185a64b-1a66-4c5d-a937-2c3732c6658f" />
+
