@@ -87,77 +87,107 @@ These discrepancies raise critical questions:
 
 ---
 
-## 2. METHODOLOGY
+2. Methodology
+2.1 Objective and Approach
 
-### 2.1 Objective and Approach
-As discussed above, **EMM provides an extensive set of spectra**.  
-The **statistical clustering technique** employed by *Fonti & Marzo (2010)* is well suited for analyzing large datasets such as those from EMM, as it improves the **signal-to-noise ratio** through data averaging.  
+The Emirates Mars Mission (EMM) provides an extensive dataset of spectra, making it well-suited for statistical clustering techniques. The method introduced by Fonti & Marzo (2010) has proven effective for large datasets, as it improves the signal-to-noise ratio through data averaging.
 
-The efficacy of using this **unsupervised statistical clustering approach** has been demonstrated on:  
-- **Synthetic data** (G. Liuzzi et al., 2014)  
-- **Planetary remote sensing spectral data** (G. A. Marzo et al., 2008)  
-- **Spectral classification maps of Mars (CRISM/MRO)** (A. Pletl et al., 2023)  
-- **Surface classification of Mercury & the Moon** (S. Taisei et al., 2024)  
+This approach has been validated and applied across multiple contexts:
 
-A comprehensive explanation of the clustering method applied to TES spectra can be found in *G. A. Marzo et al. (2008)*.  
+Synthetic data → Liuzzi et al. (2014)
 
----
+Planetary remote sensing spectra → Marzo et al. (2008)
 
-### K-means Clustering Procedure
-The clustering procedure uses **k-means**, which minimizes the within-cluster sum of squares:
+Spectral classification maps of Mars (CRISM/MRO) → Pletl et al. (2023)
 
-```math
-arg min_C  Σ (from i=1 to k) Σ (x ∈ C_i) || x − μ_i ||²
+Surface classification of Mercury & the Moon → Taisei et al. (2024)
 
+A detailed explanation of this clustering method, particularly as applied to TES spectra, can be found in Marzo et al. (2008).
+
+K-means Clustering
+
+The clustering procedure employs the k-means algorithm, which minimizes the within-cluster sum of squares:
+
+arg min
+𝐶
+∑
+𝑖
+=
+1
+𝑘
+∑
+𝑥
+∈
+𝐶
+𝑖
+∥
+𝑥
+−
+𝜇
+𝑖
+∥
+2
+C
+arg min
+	​
+
+i=1
+∑
+k
+	​
+
+x∈C
+i
+	​
+
+∑
+	​
+
+∥x−μ
+i
+	​
+
+∥
+2
 
 Where:
 
 k → number of clusters
 
-C = {C₁, C₂, …, Ck} → the clusters
+C = {C₁, C₂, …, Cₖ} → set of clusters
 
-x → data points assigned to cluster i
+x → data point assigned to cluster i
 
 μᵢ → centroid (mean) of cluster Cᵢ
 
-||x − μᵢ||² → squared Euclidean distance between data point x and centroid μᵢ (D. Steinley, 2006)
+‖x − μᵢ‖² → squared Euclidean distance between data point x and centroid μᵢ (Steinley, 2006)
 
 Limitations of K-means
 
-Some well-known challenges of applying k-means to planetary emissivity spectra:
+Noise sensitivity → noisy data can cause misclassification or poor centroid selection (Jolion & Rosenfeld, 1989).
 
-Noise sensitivity → misclassifications & incorrect centroid selection (J.-M. Jolion & A. Rosenfeld, 1989)
+Spectral dilution → clustering over large regions can weaken or distort narrow methane absorption features (Fonti et al., 2015).
 
-Dilution of narrow absorption features → clustering over large regions can obscure methane signals (Fonti et al., 2015)
-
-Choosing k → optimal cluster count must be set a priori (S. Turner et al., 2018)
+Choice of k → the number of clusters must be specified a priori, which is non-trivial (Turner et al., 2018).
 
 Refinements by Fonti et al. (2015)
 
-To address these limitations, Fonti et al. refined the clustering process by:
+To address these limitations, Fonti et al. (2015) refined the methodology by:
 
-Noise reduction → removing spurious spectra using rigorous filtering methods specific to TES infrared emission data.
+Applying rigorous noise reduction for TES infrared spectra.
 
-Targeted spectral range → focusing only on regions with methane absorption channels.
+Focusing on narrow spectral regions to better isolate methane absorption.
 
-Consistent cluster number → using the same k value as in Fonti & Marzo (2010) for direct comparison.
+Keeping the same number of clusters as in 2010, ensuring comparability while acknowledging the lack of clear intrinsic clustering.
 
-These refinements revised earlier methane detections as inconclusive.
-
-
-
-Relevance for EMM/EMIRS
-
-The methods remain highly relevant since EMIRS shares a direct lineage with TES (M. D. Smith et al., 2022).
-
-These clustering techniques serve as a framework for analyzing EMM data to derive novel insights.
+These refinements led to earlier methane detections being deemed inconclusive, but the methods remain highly relevant for emissivity data. Importantly, the EMIRS spectrometer on EMM shares direct lineage with TES (Smith et al., 2022), making these techniques directly applicable.
 
 Application in This Study
 
-Applied refinements from Fonti et al. (2015) to all original TES datasets (including those not considered in the 2015 revision).
+Applied refined clustering techniques to EMM/EMIRS data.
 
-Validation step:
+Reanalyzed the original Fonti & Marzo (2010) dataset, which was not revisited in 2015.
 
-First applied to TES data at Ls = 180° (as in Fonti et al., 2015).
+Validation step → replicated TES analysis at Ls = 180° (Fonti et al., 2015).
 
-Then extended to Ls = 0°, 90°, 270° to check for seasonal variations in TES data.
+Extended study → applied the method to Ls = 0°, 90°, and 270° to test for seasonal variation in TES data.
